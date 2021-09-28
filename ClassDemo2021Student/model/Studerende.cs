@@ -20,6 +20,8 @@ namespace ClassDemo2021Student.model
         private string _email;
         private int _semester;
 
+        private Computer _computer; // svarer tit streg mellem Studerende og Computer
+
         /*
          * Properties - gør attributter tilgængelige udenfor klasssen
          *
@@ -31,6 +33,7 @@ namespace ClassDemo2021Student.model
             set { _navn = value;  }
         }
 
+        
         public string Adresse
         {
             get { return _adresse; }
@@ -42,6 +45,12 @@ namespace ClassDemo2021Student.model
         public int Semester
         {
             get { return _semester; }
+        }
+
+        public Computer Computer
+        {
+            get { return _computer; }
+            set { _computer = value; }
         }
 
         /*
@@ -59,6 +68,8 @@ namespace ClassDemo2021Student.model
             _tlf = 12345678;
             _email = "peter@dummymail.dk";
             _semester = 0;
+
+            _computer = null;
         }
 
 
