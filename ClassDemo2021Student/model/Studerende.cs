@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassDemo2021Student.model
 {
-    public class Studerende
+    public class Studerende:Person
     {
 
         /*
@@ -14,8 +14,8 @@ namespace ClassDemo2021Student.model
          *
          * ALTID Private 
          */
-        private string _navn;
-        private string _adresse;
+        //private string _navn; -- findes i person
+        //private string _adresse; -- findes i person
         private int _tlf;
         private string _email;
         private int _semester;
@@ -27,18 +27,22 @@ namespace ClassDemo2021Student.model
          *
          * ALTID Public
          */
-        public string Navn
-        {
-            get { return _navn; }
-            set { _navn = value;  }
-        }
+
+        /*
+         * Findes i Person (navn + adresse
+         */
+        //public string Navn
+        //{
+        //    get { return _navn; }
+        //    set { _navn = value;  }
+        //}
 
         
-        public string Adresse
-        {
-            get { return _adresse; }
-            set { _adresse = value; }
-        }
+        //public string Adresse
+        //{
+        //    get { return _adresse; }
+        //    set { _adresse = value; }
+        //}
 
         // ... ligeså for tlf og email
 
@@ -60,11 +64,11 @@ namespace ClassDemo2021Student.model
          *
          * INGEN returværdi - NAVN = KLASSENAVN
          */
-        public Studerende()
+        public Studerende(): base("peter", "vejnavn")
         {
             // standard værdier
-            _navn = "Peter";
-            _adresse = "vejnavn";
+            //_navn = "Peter";
+            //_adresse = "vejnavn";
             _tlf = 12345678;
             _email = "peter@dummymail.dk";
             _semester = 0;
